@@ -21,7 +21,7 @@ public class HashMapInitializingDemo {
 		articleMapOne.put("ar03", "Another article");
 		System.out.println(articleMapOne);
 		
-		Map<String, String> doubleBraceMap  = new HashMap<>() {{
+		Map<String, String> doubleBraceMap  = new HashMap<String, String>() {{
 		    put("key1", "value1");
 		    put("key2", "value2");
 		}};
@@ -47,7 +47,7 @@ public class HashMapInitializingDemo {
 			{3, "three"},
 		}).collect(Collectors.toMap(data -> (Integer)data[0] , data -> (String)data[1]  ));
 		System.out.println(mapStream);
-		
+		/*
 		//using java 8 Map.of method initialization as both String as key value pairs
 		//limits intialiazation upto 10 key value pairs
 		Map<String, String> java9Mapvariable = Map.of("key1","value1", "key2", "value2");
@@ -59,7 +59,7 @@ public class HashMapInitializingDemo {
 			new AbstractMap.SimpleEntry<>("3","three")	
 			);
 		System.out.println(mapOfEntries);
-
+		*/
 
 	}
 

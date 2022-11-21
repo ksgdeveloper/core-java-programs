@@ -8,7 +8,7 @@ import java.util.Set;
 public class HashMapApp {
 
 	public static void main(String[] args) {
-		Map<String, String> maps = new HashMap<>() {{
+		Map<String, String> maps = new HashMap<String, String>() {{
 			put("1","one");
 			put("2","two");
 			put("3","three");
