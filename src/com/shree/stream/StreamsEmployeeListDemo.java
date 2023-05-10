@@ -1,8 +1,11 @@
 package com.shree.stream;
 
+import com.sun.xml.internal.ws.util.StringUtils;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class StreamsEmployeeListDemo {
@@ -10,7 +13,7 @@ public class StreamsEmployeeListDemo {
 	public static void main(String[] args) {
 
 		List<Employee> employeeList = new ArrayList<>();
-		employeeList.add(new Employee(1,"Rohan", 60000L, "IT"));
+		employeeList.add(new Employee(1,null, 60000L, "IT"));
 		employeeList.add(new Employee(2,"Rohit", 70000L, "CSE"));
 		employeeList.add(new Employee(3,"Rahul", 40000L, "CIVIL"));
 		employeeList.add(new Employee(4,"Rajesh", 75000L, "IT"));
@@ -31,7 +34,7 @@ public class StreamsEmployeeListDemo {
 			.sorted((o1,o2) -> o2.getSalary().intValue()-o1.getSalary().intValue())
 				.filter(e -> e.getBranch().equals("IT"))
 				.forEach(System.out::println);
-		
+
 		//List Employess based on their salaries ascending for branch IT
 		System.out.println("List Employess based on their salaries ascending for branch CSE=====");
 		employeeList.stream()
@@ -52,6 +55,13 @@ public class StreamsEmployeeListDemo {
 											.filter(emp->emp.getSalary() <= 70000)
 													.collect(Collectors.toList());
 		System.out.println(taxNoList);
+
+		String firstEmployee = employeeList.stream().filter(emp-> emp.getName()!=null).map(emp->emp.getName()).findFirst().orElse(null);
+		System.out.println("first employee : "+firstEmployee);
+
+		String anotherFirstEmployee = employeeList.get(0).getName();
+		System.out.println("first employee : "+anotherFirstEmployee);
+
 	}
 }
 

@@ -16,9 +16,8 @@ public class ArrayListJava8Demo {
 		System.out.println(numbers);
 		
 		//Another initialization using only Java8 Streams
-		List<Integer> newList = new ArrayList<>(
-				  IntStream.range(1, 11).boxed().collect(Collectors.toCollection(ArrayList::new))
-				  );
+		List<Integer> newList = new ArrayList<>(IntStream.range(1, 11)
+				.boxed().collect(Collectors.toCollection(ArrayList::new)));
 		System.out.println(newList);
 		Collections.reverse(newList);
 		System.out.println("After reverse Collections " + newList);

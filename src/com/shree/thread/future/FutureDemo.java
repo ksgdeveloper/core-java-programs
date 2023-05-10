@@ -15,9 +15,20 @@ public class FutureDemo {
         System.out.println(future.get());
         executors.shutdown();
 
-        CompletableFuture<String> completableFuture = new CompletableFuture<>();
+        CompletableFuture<Void> completableFuture = CompletableFuture.runAsync(new Runnable() {
+            @Override
+            public void run() {
+                // Simulate a long-running Job
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    throw new IllegalStateException(e);
+                }
+                System.out.println("I'll run in a separate thread than the main thread.");
+            }
+        });
+
         completableFuture.get();
-        completableFuture.complete("complete successfully");
     }
 
     private static void delay(long secs){

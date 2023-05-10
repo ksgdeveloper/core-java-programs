@@ -1,4 +1,4 @@
-package com.shree;
+package com.shree.enumdemo;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @author shrikant
  *
  */
-public class EnumDemo {
+public class EnumDemo1 {
 	public static void main(String[] args) {
 		//Declaration of enum
 		//Only Apple Identifiers can be assigned to variable ap

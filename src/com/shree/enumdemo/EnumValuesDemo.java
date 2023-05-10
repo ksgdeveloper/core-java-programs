@@ -1,4 +1,4 @@
-package com.shree;
+package com.shree.enumdemo;
 
 import java.util.Arrays;
 
