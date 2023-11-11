@@ -14,7 +14,12 @@ public class ArrayToList {
 		
 		//Modifiable list when its been passed in as argument
 		List<String> listMonths = new ArrayList<>(Arrays.asList(months));
-		
+		listMonths.stream().forEach(str -> {
+			if(str.length() == 5){
+				System.out.println("Month: "+ str);
+				return;
+			}
+		});
 		listMonths.add("June");
 		listMonths.set(0,"Jan");
 		System.out.println("Collection Sort method");
