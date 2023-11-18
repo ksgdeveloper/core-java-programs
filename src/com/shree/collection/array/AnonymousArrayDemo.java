@@ -13,10 +13,9 @@ public class AnonymousArrayDemo {
 		System.out.println(sum);
 		Arrays.stream(anonArray).sorted().forEach(e-> System.out.println(e+" "));
 
-		
 		String str[] = new String[] {"hard", "work", "works"};
 		for(String s : str ) {
-			System.out.print(s+",");
+			System.out.print(s+" ");
 		}
 	}
 

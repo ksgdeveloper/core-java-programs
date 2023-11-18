@@ -1,6 +1,7 @@
 package com.shree.collection.array;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -27,7 +28,7 @@ public class ArraysClassDemo {
 
 		// 4. Using Streams Class Sorted
 		System.out.println("\nUsing Streams Another way Sorted");
-		Arrays.asList(months).stream().sorted().forEach(System.out::println);
+		//Arrays.asList(months).stream().sorted((o1, o2) -> Comparator.reverseOrder().compare(o1, o2))).forEach(System.out::println);
 
 		String[] arrayMonths = new String[months.size()];
 		months.toArray(arrayMonths);

@@ -8,7 +8,7 @@ public class GetListOfMonths {
         DateFormatSymbols  dateFormatSymbols = new DateFormatSymbols();
         String[] monthNames = dateFormatSymbols.getMonths();
         System.out.println(Arrays.toString(monthNames));
-
-        Arrays.stream(monthNames).forEach(System.out::print);
+        Arrays.stream(monthNames).filter(s-> s.length()>0).forEach(s -> System.out.print(s+","));
+        System.out.println(monthNames[12].length());
     }
 }
