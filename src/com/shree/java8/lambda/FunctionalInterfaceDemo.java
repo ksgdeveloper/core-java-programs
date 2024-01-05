@@ -1,4 +1,4 @@
-package com.shree.java8.optionals.lambda;
+package com.shree.java8.lambda;
 
 import java.util.ArrayList;
 import java.util.List;

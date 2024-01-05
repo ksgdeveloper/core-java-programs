@@ -1,4 +1,4 @@
-package com.shree.java8.optionals.lambda;
+package com.shree.java8.lambda;
 @FunctionalInterface
 public interface MyInterface {
 

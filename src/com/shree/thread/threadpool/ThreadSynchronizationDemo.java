@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class ThreadSynchronizationDemo {
 	public static void main(String[] args) {
 		
-		ProcessorThread pt
-		= new ProcessorThread();
+		ProcessorThread pt = new ProcessorThread();
 		pt.start();
 		
 		System.out.println("Press return to exit");
@@ -15,18 +14,14 @@ public class ThreadSynchronizationDemo {
 			scanner.nextLine();
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
-		
 		pt.shutdown();
-		
 	}
 }
 
 class ProcessorThread extends Thread{
-	
 	private volatile boolean running = true;
-	
 	public void run() {
 		while (running) {
 			System.out.println(" Hello ");
@@ -37,10 +32,7 @@ class ProcessorThread extends Thread{
 			}
 		}
 	}
-
 	public void shutdown() {
 		running = false;
 	}
-	
-	
 }
