@@ -13,7 +13,7 @@ public class ArrayToList {
 		List<String> listMonths = new ArrayList<>(Arrays.asList(months));
 		
 		listMonths.add("June");
-		listMonths.set(0,"Jan");
+		//listMonths.set(0,"Jan");
 		System.out.println("Collection Sort method");
 		Collections.sort(listMonths);
 		System.out.println(listMonths);
@@ -27,11 +27,11 @@ public class ArrayToList {
 		listMonths.stream().forEach(e-> System.out.print(e+","));
 		
 		//display in ascending order
-		System.out.println("display in ascending order");
+		System.out.println("\ndisplay in ascending order - ");
 		listMonths.stream().sorted().forEach(e-> System.out.print(e+","));
 		
 		//display in ascending order
-		System.out.println("\ndisplay in ascending order - ");
+		System.out.println("\ndisplay in descending order - ");
 		listMonths.stream().forEach(e-> System.out.print(e+","));
 		
 		System.out.println("\ndisplay months count order - " + listMonths.stream().count());

@@ -1,6 +1,9 @@
 package com.shree.collection.array;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Array2DDemo {
 
@@ -25,6 +28,10 @@ public class Array2DDemo {
 		
 		//display contents of array multidimensional arrays
 		System.out.println(Arrays.deepToString(names));
+
+		//Java 8 method FlatMap example
+		List<String> flatMapDemo = Arrays.stream(names).flatMap(a -> Stream.of(a)).collect(Collectors.toList());
+		System.out.println(flatMapDemo);
 	}
 
 }

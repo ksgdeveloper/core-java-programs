@@ -2,7 +2,6 @@ package java8inaction.chap1;
 
 
 class Apple{
-	
 	private int weight = 0;
 	private String color = "";
 	
@@ -10,7 +9,6 @@ class Apple{
 		this.weight = weight;
 		this.color = color;
 	}
-
 	public int getWeight() {
 		return weight;
 	}
@@ -34,6 +32,5 @@ class Apple{
 
 	public Apple() {
 	}
-	
-	
+
 }

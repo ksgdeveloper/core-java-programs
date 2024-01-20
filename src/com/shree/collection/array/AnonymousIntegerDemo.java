@@ -11,12 +11,12 @@ public class AnonymousIntegerDemo {
 		anonArray.stream().sorted(Comparator.reverseOrder()).forEach(e -> System.out.print(e + " "));
 		System.out.println();
 		list.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
-		//int sum = Arrays.stream(anonArray).sum();
-		//System.out.println("\nTotal Sum "+sum);
 
-		String str[] = new String[] { "hard", "work", "works" };
-		for (String s : str) {
-			System.out.print(s + ",");
-		}
+		int sum = anonArray.stream().mapToInt(Integer::intValue).sum();
+		System.out.println("\nTotal Sum "+sum);
+
+		int reduceSum = anonArray.stream().reduce(0, (a,b) -> (a+b));
+		System.out.println("\nTotal Sum "+reduceSum);
+
 	}
 }
